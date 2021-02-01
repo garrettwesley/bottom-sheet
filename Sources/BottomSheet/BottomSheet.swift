@@ -56,7 +56,6 @@ public struct BottomSheet<Content: View>: View {
                 VStack(spacing: 0) {
                     self.topBar(geometry: geometry)
                     VStack(spacing: -8) {
-                        Spacer()
                         self.content.padding(.bottom, geometry.safeAreaInsets.bottom)
                         Spacer()
                     }
