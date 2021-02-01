@@ -13,7 +13,7 @@ public extension View {
         isPresented: Binding<Bool>,
         height: CGFloat,
         topBarHeight: CGFloat = 30,
-        topBarColor: Color = Color(.secondary),
+        topBarColor: Color = Color(.gray),
         topBarCornerRadius: CGFloat? = nil,
         contentBackgroundColor: Color = Color(.systemBackground),
         topBarBackgroundColor: Color = Color(.systemBackground),
