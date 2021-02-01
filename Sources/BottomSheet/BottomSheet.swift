@@ -31,7 +31,7 @@ public struct BottomSheet<Content: View>: View {
         height: CGFloat,
         topBarHeight: CGFloat = 30,
         topBarCornerRadius: CGFloat? = nil,
-        topBarColor: Color = Color(.black)
+        topBarColor: Color = Color(.gray),
         topBarBackgroundColor: Color = Color(.systemBackground),
         contentBackgroundColor: Color = Color(.systemBackground),
         showTopIndicator: Bool,
