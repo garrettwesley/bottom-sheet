@@ -23,6 +23,7 @@ public struct BottomSheet<Content: View>: View {
     private let content: Content
     private let contentBackgroundColor: Color
     private let topBarBackgroundColor: Color
+    private let topBarColor: Color
     private let showTopIndicator: Bool
     
     public init(
@@ -30,6 +31,7 @@ public struct BottomSheet<Content: View>: View {
         height: CGFloat,
         topBarHeight: CGFloat = 30,
         topBarCornerRadius: CGFloat? = nil,
+        topBarColor: Color = Color(.black)
         topBarBackgroundColor: Color = Color(.systemBackground),
         contentBackgroundColor: Color = Color(.systemBackground),
         showTopIndicator: Bool,
@@ -40,6 +42,7 @@ public struct BottomSheet<Content: View>: View {
         self._isPresented = isPresented
         self.height = height
         self.topBarHeight = topBarHeight
+        self.topBarColor = topBarColor
         if let topBarCornerRadius = topBarCornerRadius {
             self.topBarCornerRadius = topBarCornerRadius
         } else {
@@ -81,7 +84,7 @@ public struct BottomSheet<Content: View>: View {
     fileprivate func topBar(geometry: GeometryProxy) -> some View {
         ZStack {
             RoundedRectangle(cornerRadius: 6)
-                .fill(Color.secondary)
+                .fill(topBarColor)
                 .frame(width: 40, height: 6)
                 .opacity(showTopIndicator ? 1 : 0)
         }
